@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JSON Schema sample.ts 1`] = `
+Object {
+  "jsonSchema": Object {
+    "$ref": "#/definitions/ServerSideConfig",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": Object {
+      "ServerSideConfig": Object {
+        "additionalProperties": false,
+        "properties": Object {
+          "name": Object {
+            "type": "string",
+          },
+          "service_a": Object {
+            "$ref": "#/definitions/ServiceA",
+          },
+          "service_b": Object {
+            "additionalProperties": false,
+            "properties": Object {
+              "apiToken": Object {
+                "type": "string",
+              },
+              "timeout": Object {
+                "type": "number",
+              },
+              "url": Object {
+                "enum": Array [
+                  "https://dev.example.com",
+                  "https://prod.example.com/b",
+                ],
+                "type": "string",
+              },
+            },
+            "required": Array [
+              "url",
+              "timeout",
+            ],
+            "type": "object",
+          },
+        },
+        "required": Array [
+          "name",
+          "service_b",
+        ],
+        "type": "object",
+      },
+      "ServiceA": Object {
+        "additionalProperties": false,
+        "properties": Object {
+          "url": Object {
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "url",
+        ],
+        "type": "object",
+      },
+    },
+  },
+}
+`;
+
+exports[`JSON Schema types.ts 1`] = `
+Object {
+  "jsonSchema": Object {
+    "$ref": "#/definitions/ServerSideConfig",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": Object {
+      "ServerSideConfig": Object {
+        "additionalProperties": false,
+        "properties": Object {
+          "name": Object {
+            "type": "string",
+          },
+          "service_a": Object {
+            "$ref": "#/definitions/ServiceA",
+          },
+          "service_b": Object {
+            "additionalProperties": false,
+            "properties": Object {
+              "apiToken": Object {
+                "type": "string",
+              },
+              "timeout": Object {
+                "type": "number",
+              },
+              "url": Object {
+                "enum": Array [
+                  "https://dev.example.com",
+                  "https://prod.example.com/b",
+                ],
+                "type": "string",
+              },
+            },
+            "required": Array [
+              "url",
+              "timeout",
+            ],
+            "type": "object",
+          },
+        },
+        "required": Array [
+          "name",
+          "service_b",
+        ],
+        "type": "object",
+      },
+      "ServiceA": Object {
+        "additionalProperties": false,
+        "properties": Object {
+          "url": Object {
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "url",
+        ],
+        "type": "object",
+      },
+    },
+  },
+}
+`;
