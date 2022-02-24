@@ -1,0 +1,1567 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Kubernetes Schema Kubernetes Schema 1`] = `
+Object {
+  "apiVersion": "",
+  "kind": "",
+  "metadata": Object {
+    "annotations": Object {},
+    "clusterName": "",
+    "creationTimestamp": "",
+    "deletionGracePeriodSeconds": 0,
+    "deletionTimestamp": "",
+    "finalizers": Array [
+      "",
+    ],
+    "generateName": "",
+    "generation": 0,
+    "labels": Object {},
+    "managedFields": Array [
+      Object {
+        "apiVersion": "",
+        "fieldsType": "",
+        "fieldsV1": Object {},
+        "manager": "",
+        "operation": "",
+        "subresource": "",
+        "time": "",
+      },
+    ],
+    "name": "",
+    "namespace": "",
+    "ownerReferences": Array [
+      Object {
+        "apiVersion": "",
+        "blockOwnerDeletion": false,
+        "controller": false,
+        "kind": "",
+        "name": "",
+        "uid": "",
+      },
+    ],
+    "resourceVersion": "",
+    "selfLink": "",
+    "uid": "",
+  },
+  "spec": Object {
+    "minReadySeconds": 0,
+    "paused": false,
+    "progressDeadlineSeconds": 0,
+    "replicas": 0,
+    "revisionHistoryLimit": 0,
+    "selector": Object {
+      "matchExpressions": Array [
+        Object {
+          "key": "",
+          "operator": "",
+          "values": Array [
+            "",
+          ],
+        },
+      ],
+      "matchLabels": Object {},
+    },
+    "strategy": Object {
+      "rollingUpdate": Object {
+        "maxSurge": 0,
+        "maxUnavailable": 0,
+      },
+      "type": "",
+    },
+    "template": Object {
+      "metadata": Object {
+        "annotations": Object {},
+        "clusterName": "",
+        "creationTimestamp": "",
+        "deletionGracePeriodSeconds": 0,
+        "deletionTimestamp": "",
+        "finalizers": Array [
+          "",
+        ],
+        "generateName": "",
+        "generation": 0,
+        "labels": Object {},
+        "managedFields": Array [
+          Object {
+            "apiVersion": "",
+            "fieldsType": "",
+            "fieldsV1": Object {},
+            "manager": "",
+            "operation": "",
+            "subresource": "",
+            "time": "",
+          },
+        ],
+        "name": "",
+        "namespace": "",
+        "ownerReferences": Array [
+          Object {
+            "apiVersion": "",
+            "blockOwnerDeletion": false,
+            "controller": false,
+            "kind": "",
+            "name": "",
+            "uid": "",
+          },
+        ],
+        "resourceVersion": "",
+        "selfLink": "",
+        "uid": "",
+      },
+      "spec": Object {
+        "activeDeadlineSeconds": 0,
+        "affinity": Object {
+          "nodeAffinity": Object {
+            "preferredDuringSchedulingIgnoredDuringExecution": Array [
+              Object {
+                "preference": Object {
+                  "matchExpressions": Array [
+                    Object {
+                      "key": "",
+                      "operator": "",
+                      "values": Array [
+                        "",
+                      ],
+                    },
+                  ],
+                  "matchFields": Array [
+                    Object {
+                      "key": "",
+                      "operator": "",
+                      "values": Array [
+                        "",
+                      ],
+                    },
+                  ],
+                },
+                "weight": 0,
+              },
+            ],
+            "requiredDuringSchedulingIgnoredDuringExecution": Object {
+              "nodeSelectorTerms": Array [
+                Object {
+                  "matchExpressions": Array [
+                    Object {
+                      "key": "",
+                      "operator": "",
+                      "values": Array [
+                        "",
+                      ],
+                    },
+                  ],
+                  "matchFields": Array [
+                    Object {
+                      "key": "",
+                      "operator": "",
+                      "values": Array [
+                        "",
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+          },
+          "podAffinity": Object {
+            "preferredDuringSchedulingIgnoredDuringExecution": Array [
+              Object {
+                "podAffinityTerm": Object {
+                  "labelSelector": Object {
+                    "matchExpressions": Array [
+                      Object {
+                        "key": "",
+                        "operator": "",
+                        "values": Array [
+                          "",
+                        ],
+                      },
+                    ],
+                    "matchLabels": Object {},
+                  },
+                  "namespaceSelector": Object {
+                    "matchExpressions": Array [
+                      Object {
+                        "key": "",
+                        "operator": "",
+                        "values": Array [
+                          "",
+                        ],
+                      },
+                    ],
+                    "matchLabels": Object {},
+                  },
+                  "namespaces": Array [
+                    "",
+                  ],
+                  "topologyKey": "",
+                },
+                "weight": 0,
+              },
+            ],
+            "requiredDuringSchedulingIgnoredDuringExecution": Array [
+              Object {
+                "labelSelector": Object {
+                  "matchExpressions": Array [
+                    Object {
+                      "key": "",
+                      "operator": "",
+                      "values": Array [
+                        "",
+                      ],
+                    },
+                  ],
+                  "matchLabels": Object {},
+                },
+                "namespaceSelector": Object {
+                  "matchExpressions": Array [
+                    Object {
+                      "key": "",
+                      "operator": "",
+                      "values": Array [
+                        "",
+                      ],
+                    },
+                  ],
+                  "matchLabels": Object {},
+                },
+                "namespaces": Array [
+                  "",
+                ],
+                "topologyKey": "",
+              },
+            ],
+          },
+          "podAntiAffinity": Object {
+            "preferredDuringSchedulingIgnoredDuringExecution": Array [
+              Object {
+                "podAffinityTerm": Object {
+                  "labelSelector": Object {
+                    "matchExpressions": Array [
+                      Object {
+                        "key": "",
+                        "operator": "",
+                        "values": Array [
+                          "",
+                        ],
+                      },
+                    ],
+                    "matchLabels": Object {},
+                  },
+                  "namespaceSelector": Object {
+                    "matchExpressions": Array [
+                      Object {
+                        "key": "",
+                        "operator": "",
+                        "values": Array [
+                          "",
+                        ],
+                      },
+                    ],
+                    "matchLabels": Object {},
+                  },
+                  "namespaces": Array [
+                    "",
+                  ],
+                  "topologyKey": "",
+                },
+                "weight": 0,
+              },
+            ],
+            "requiredDuringSchedulingIgnoredDuringExecution": Array [
+              Object {
+                "labelSelector": Object {
+                  "matchExpressions": Array [
+                    Object {
+                      "key": "",
+                      "operator": "",
+                      "values": Array [
+                        "",
+                      ],
+                    },
+                  ],
+                  "matchLabels": Object {},
+                },
+                "namespaceSelector": Object {
+                  "matchExpressions": Array [
+                    Object {
+                      "key": "",
+                      "operator": "",
+                      "values": Array [
+                        "",
+                      ],
+                    },
+                  ],
+                  "matchLabels": Object {},
+                },
+                "namespaces": Array [
+                  "",
+                ],
+                "topologyKey": "",
+              },
+            ],
+          },
+        },
+        "automountServiceAccountToken": false,
+        "containers": Array [
+          Object {
+            "args": Array [
+              "",
+            ],
+            "command": Array [
+              "",
+            ],
+            "env": Array [
+              Object {
+                "name": "",
+                "value": "",
+                "valueFrom": Object {
+                  "configMapKeyRef": Object {
+                    "key": "",
+                    "name": "",
+                    "optional": false,
+                  },
+                  "fieldRef": Object {
+                    "apiVersion": "",
+                    "fieldPath": "",
+                  },
+                  "resourceFieldRef": Object {
+                    "containerName": "",
+                    "divisor": "",
+                    "resource": "",
+                  },
+                  "secretKeyRef": Object {
+                    "key": "",
+                    "name": "",
+                    "optional": false,
+                  },
+                },
+              },
+            ],
+            "envFrom": Array [
+              Object {
+                "configMapRef": Object {
+                  "name": "",
+                  "optional": false,
+                },
+                "prefix": "",
+                "secretRef": Object {
+                  "name": "",
+                  "optional": false,
+                },
+              },
+            ],
+            "image": "",
+            "imagePullPolicy": "",
+            "lifecycle": Object {
+              "postStart": Object {
+                "exec": Object {
+                  "command": Array [
+                    "",
+                  ],
+                },
+                "httpGet": Object {
+                  "host": "",
+                  "httpHeaders": Array [
+                    Object {
+                      "name": "",
+                      "value": "",
+                    },
+                  ],
+                  "path": "",
+                  "port": 0,
+                  "scheme": "",
+                },
+                "tcpSocket": Object {
+                  "host": "",
+                  "port": 0,
+                },
+              },
+              "preStop": Object {
+                "exec": Object {
+                  "command": Array [
+                    "",
+                  ],
+                },
+                "httpGet": Object {
+                  "host": "",
+                  "httpHeaders": Array [
+                    Object {
+                      "name": "",
+                      "value": "",
+                    },
+                  ],
+                  "path": "",
+                  "port": 0,
+                  "scheme": "",
+                },
+                "tcpSocket": Object {
+                  "host": "",
+                  "port": 0,
+                },
+              },
+            },
+            "livenessProbe": Object {
+              "exec": Object {
+                "command": Array [
+                  "",
+                ],
+              },
+              "failureThreshold": 0,
+              "httpGet": Object {
+                "host": "",
+                "httpHeaders": Array [
+                  Object {
+                    "name": "",
+                    "value": "",
+                  },
+                ],
+                "path": "",
+                "port": 0,
+                "scheme": "",
+              },
+              "initialDelaySeconds": 0,
+              "periodSeconds": 0,
+              "successThreshold": 0,
+              "tcpSocket": Object {
+                "host": "",
+                "port": 0,
+              },
+              "terminationGracePeriodSeconds": 0,
+              "timeoutSeconds": 0,
+            },
+            "name": "",
+            "ports": Array [
+              Object {
+                "containerPort": 0,
+                "hostIP": "",
+                "hostPort": 0,
+                "name": "",
+                "protocol": "",
+              },
+            ],
+            "readinessProbe": Object {
+              "exec": Object {
+                "command": Array [
+                  "",
+                ],
+              },
+              "failureThreshold": 0,
+              "httpGet": Object {
+                "host": "",
+                "httpHeaders": Array [
+                  Object {
+                    "name": "",
+                    "value": "",
+                  },
+                ],
+                "path": "",
+                "port": 0,
+                "scheme": "",
+              },
+              "initialDelaySeconds": 0,
+              "periodSeconds": 0,
+              "successThreshold": 0,
+              "tcpSocket": Object {
+                "host": "",
+                "port": 0,
+              },
+              "terminationGracePeriodSeconds": 0,
+              "timeoutSeconds": 0,
+            },
+            "resources": Object {
+              "limits": Object {},
+              "requests": Object {},
+            },
+            "securityContext": Object {
+              "allowPrivilegeEscalation": false,
+              "capabilities": Object {
+                "add": Array [
+                  "",
+                ],
+                "drop": Array [
+                  "",
+                ],
+              },
+              "privileged": false,
+              "procMount": "",
+              "readOnlyRootFilesystem": false,
+              "runAsGroup": 0,
+              "runAsNonRoot": false,
+              "runAsUser": 0,
+              "seLinuxOptions": Object {
+                "level": "",
+                "role": "",
+                "type": "",
+                "user": "",
+              },
+              "seccompProfile": Object {
+                "localhostProfile": "",
+                "type": "",
+              },
+              "windowsOptions": Object {
+                "gmsaCredentialSpec": "",
+                "gmsaCredentialSpecName": "",
+                "hostProcess": false,
+                "runAsUserName": "",
+              },
+            },
+            "startupProbe": Object {
+              "exec": Object {
+                "command": Array [
+                  "",
+                ],
+              },
+              "failureThreshold": 0,
+              "httpGet": Object {
+                "host": "",
+                "httpHeaders": Array [
+                  Object {
+                    "name": "",
+                    "value": "",
+                  },
+                ],
+                "path": "",
+                "port": 0,
+                "scheme": "",
+              },
+              "initialDelaySeconds": 0,
+              "periodSeconds": 0,
+              "successThreshold": 0,
+              "tcpSocket": Object {
+                "host": "",
+                "port": 0,
+              },
+              "terminationGracePeriodSeconds": 0,
+              "timeoutSeconds": 0,
+            },
+            "stdin": false,
+            "stdinOnce": false,
+            "terminationMessagePath": "",
+            "terminationMessagePolicy": "",
+            "tty": false,
+            "volumeDevices": Array [
+              Object {
+                "devicePath": "",
+                "name": "",
+              },
+            ],
+            "volumeMounts": Array [
+              Object {
+                "mountPath": "",
+                "mountPropagation": "",
+                "name": "",
+                "readOnly": false,
+                "subPath": "",
+                "subPathExpr": "",
+              },
+            ],
+            "workingDir": "",
+          },
+        ],
+        "dnsConfig": Object {
+          "nameservers": Array [
+            "",
+          ],
+          "options": Array [
+            Object {
+              "name": "",
+              "value": "",
+            },
+          ],
+          "searches": Array [
+            "",
+          ],
+        },
+        "dnsPolicy": "",
+        "enableServiceLinks": false,
+        "ephemeralContainers": Array [
+          Object {
+            "args": Array [
+              "",
+            ],
+            "command": Array [
+              "",
+            ],
+            "env": Array [
+              Object {
+                "name": "",
+                "value": "",
+                "valueFrom": Object {
+                  "configMapKeyRef": Object {
+                    "key": "",
+                    "name": "",
+                    "optional": false,
+                  },
+                  "fieldRef": Object {
+                    "apiVersion": "",
+                    "fieldPath": "",
+                  },
+                  "resourceFieldRef": Object {
+                    "containerName": "",
+                    "divisor": "",
+                    "resource": "",
+                  },
+                  "secretKeyRef": Object {
+                    "key": "",
+                    "name": "",
+                    "optional": false,
+                  },
+                },
+              },
+            ],
+            "envFrom": Array [
+              Object {
+                "configMapRef": Object {
+                  "name": "",
+                  "optional": false,
+                },
+                "prefix": "",
+                "secretRef": Object {
+                  "name": "",
+                  "optional": false,
+                },
+              },
+            ],
+            "image": "",
+            "imagePullPolicy": "",
+            "lifecycle": Object {
+              "postStart": Object {
+                "exec": Object {
+                  "command": Array [
+                    "",
+                  ],
+                },
+                "httpGet": Object {
+                  "host": "",
+                  "httpHeaders": Array [
+                    Object {
+                      "name": "",
+                      "value": "",
+                    },
+                  ],
+                  "path": "",
+                  "port": 0,
+                  "scheme": "",
+                },
+                "tcpSocket": Object {
+                  "host": "",
+                  "port": 0,
+                },
+              },
+              "preStop": Object {
+                "exec": Object {
+                  "command": Array [
+                    "",
+                  ],
+                },
+                "httpGet": Object {
+                  "host": "",
+                  "httpHeaders": Array [
+                    Object {
+                      "name": "",
+                      "value": "",
+                    },
+                  ],
+                  "path": "",
+                  "port": 0,
+                  "scheme": "",
+                },
+                "tcpSocket": Object {
+                  "host": "",
+                  "port": 0,
+                },
+              },
+            },
+            "livenessProbe": Object {
+              "exec": Object {
+                "command": Array [
+                  "",
+                ],
+              },
+              "failureThreshold": 0,
+              "httpGet": Object {
+                "host": "",
+                "httpHeaders": Array [
+                  Object {
+                    "name": "",
+                    "value": "",
+                  },
+                ],
+                "path": "",
+                "port": 0,
+                "scheme": "",
+              },
+              "initialDelaySeconds": 0,
+              "periodSeconds": 0,
+              "successThreshold": 0,
+              "tcpSocket": Object {
+                "host": "",
+                "port": 0,
+              },
+              "terminationGracePeriodSeconds": 0,
+              "timeoutSeconds": 0,
+            },
+            "name": "",
+            "ports": Array [
+              Object {
+                "containerPort": 0,
+                "hostIP": "",
+                "hostPort": 0,
+                "name": "",
+                "protocol": "",
+              },
+            ],
+            "readinessProbe": Object {
+              "exec": Object {
+                "command": Array [
+                  "",
+                ],
+              },
+              "failureThreshold": 0,
+              "httpGet": Object {
+                "host": "",
+                "httpHeaders": Array [
+                  Object {
+                    "name": "",
+                    "value": "",
+                  },
+                ],
+                "path": "",
+                "port": 0,
+                "scheme": "",
+              },
+              "initialDelaySeconds": 0,
+              "periodSeconds": 0,
+              "successThreshold": 0,
+              "tcpSocket": Object {
+                "host": "",
+                "port": 0,
+              },
+              "terminationGracePeriodSeconds": 0,
+              "timeoutSeconds": 0,
+            },
+            "resources": Object {
+              "limits": Object {},
+              "requests": Object {},
+            },
+            "securityContext": Object {
+              "allowPrivilegeEscalation": false,
+              "capabilities": Object {
+                "add": Array [
+                  "",
+                ],
+                "drop": Array [
+                  "",
+                ],
+              },
+              "privileged": false,
+              "procMount": "",
+              "readOnlyRootFilesystem": false,
+              "runAsGroup": 0,
+              "runAsNonRoot": false,
+              "runAsUser": 0,
+              "seLinuxOptions": Object {
+                "level": "",
+                "role": "",
+                "type": "",
+                "user": "",
+              },
+              "seccompProfile": Object {
+                "localhostProfile": "",
+                "type": "",
+              },
+              "windowsOptions": Object {
+                "gmsaCredentialSpec": "",
+                "gmsaCredentialSpecName": "",
+                "hostProcess": false,
+                "runAsUserName": "",
+              },
+            },
+            "startupProbe": Object {
+              "exec": Object {
+                "command": Array [
+                  "",
+                ],
+              },
+              "failureThreshold": 0,
+              "httpGet": Object {
+                "host": "",
+                "httpHeaders": Array [
+                  Object {
+                    "name": "",
+                    "value": "",
+                  },
+                ],
+                "path": "",
+                "port": 0,
+                "scheme": "",
+              },
+              "initialDelaySeconds": 0,
+              "periodSeconds": 0,
+              "successThreshold": 0,
+              "tcpSocket": Object {
+                "host": "",
+                "port": 0,
+              },
+              "terminationGracePeriodSeconds": 0,
+              "timeoutSeconds": 0,
+            },
+            "stdin": false,
+            "stdinOnce": false,
+            "targetContainerName": "",
+            "terminationMessagePath": "",
+            "terminationMessagePolicy": "",
+            "tty": false,
+            "volumeDevices": Array [
+              Object {
+                "devicePath": "",
+                "name": "",
+              },
+            ],
+            "volumeMounts": Array [
+              Object {
+                "mountPath": "",
+                "mountPropagation": "",
+                "name": "",
+                "readOnly": false,
+                "subPath": "",
+                "subPathExpr": "",
+              },
+            ],
+            "workingDir": "",
+          },
+        ],
+        "hostAliases": Array [
+          Object {
+            "hostnames": Array [
+              "",
+            ],
+            "ip": "",
+          },
+        ],
+        "hostIPC": false,
+        "hostNetwork": false,
+        "hostPID": false,
+        "hostname": "",
+        "imagePullSecrets": Array [
+          Object {
+            "name": "",
+          },
+        ],
+        "initContainers": Array [
+          Object {
+            "args": Array [
+              "",
+            ],
+            "command": Array [
+              "",
+            ],
+            "env": Array [
+              Object {
+                "name": "",
+                "value": "",
+                "valueFrom": Object {
+                  "configMapKeyRef": Object {
+                    "key": "",
+                    "name": "",
+                    "optional": false,
+                  },
+                  "fieldRef": Object {
+                    "apiVersion": "",
+                    "fieldPath": "",
+                  },
+                  "resourceFieldRef": Object {
+                    "containerName": "",
+                    "divisor": "",
+                    "resource": "",
+                  },
+                  "secretKeyRef": Object {
+                    "key": "",
+                    "name": "",
+                    "optional": false,
+                  },
+                },
+              },
+            ],
+            "envFrom": Array [
+              Object {
+                "configMapRef": Object {
+                  "name": "",
+                  "optional": false,
+                },
+                "prefix": "",
+                "secretRef": Object {
+                  "name": "",
+                  "optional": false,
+                },
+              },
+            ],
+            "image": "",
+            "imagePullPolicy": "",
+            "lifecycle": Object {
+              "postStart": Object {
+                "exec": Object {
+                  "command": Array [
+                    "",
+                  ],
+                },
+                "httpGet": Object {
+                  "host": "",
+                  "httpHeaders": Array [
+                    Object {
+                      "name": "",
+                      "value": "",
+                    },
+                  ],
+                  "path": "",
+                  "port": 0,
+                  "scheme": "",
+                },
+                "tcpSocket": Object {
+                  "host": "",
+                  "port": 0,
+                },
+              },
+              "preStop": Object {
+                "exec": Object {
+                  "command": Array [
+                    "",
+                  ],
+                },
+                "httpGet": Object {
+                  "host": "",
+                  "httpHeaders": Array [
+                    Object {
+                      "name": "",
+                      "value": "",
+                    },
+                  ],
+                  "path": "",
+                  "port": 0,
+                  "scheme": "",
+                },
+                "tcpSocket": Object {
+                  "host": "",
+                  "port": 0,
+                },
+              },
+            },
+            "livenessProbe": Object {
+              "exec": Object {
+                "command": Array [
+                  "",
+                ],
+              },
+              "failureThreshold": 0,
+              "httpGet": Object {
+                "host": "",
+                "httpHeaders": Array [
+                  Object {
+                    "name": "",
+                    "value": "",
+                  },
+                ],
+                "path": "",
+                "port": 0,
+                "scheme": "",
+              },
+              "initialDelaySeconds": 0,
+              "periodSeconds": 0,
+              "successThreshold": 0,
+              "tcpSocket": Object {
+                "host": "",
+                "port": 0,
+              },
+              "terminationGracePeriodSeconds": 0,
+              "timeoutSeconds": 0,
+            },
+            "name": "",
+            "ports": Array [
+              Object {
+                "containerPort": 0,
+                "hostIP": "",
+                "hostPort": 0,
+                "name": "",
+                "protocol": "",
+              },
+            ],
+            "readinessProbe": Object {
+              "exec": Object {
+                "command": Array [
+                  "",
+                ],
+              },
+              "failureThreshold": 0,
+              "httpGet": Object {
+                "host": "",
+                "httpHeaders": Array [
+                  Object {
+                    "name": "",
+                    "value": "",
+                  },
+                ],
+                "path": "",
+                "port": 0,
+                "scheme": "",
+              },
+              "initialDelaySeconds": 0,
+              "periodSeconds": 0,
+              "successThreshold": 0,
+              "tcpSocket": Object {
+                "host": "",
+                "port": 0,
+              },
+              "terminationGracePeriodSeconds": 0,
+              "timeoutSeconds": 0,
+            },
+            "resources": Object {
+              "limits": Object {},
+              "requests": Object {},
+            },
+            "securityContext": Object {
+              "allowPrivilegeEscalation": false,
+              "capabilities": Object {
+                "add": Array [
+                  "",
+                ],
+                "drop": Array [
+                  "",
+                ],
+              },
+              "privileged": false,
+              "procMount": "",
+              "readOnlyRootFilesystem": false,
+              "runAsGroup": 0,
+              "runAsNonRoot": false,
+              "runAsUser": 0,
+              "seLinuxOptions": Object {
+                "level": "",
+                "role": "",
+                "type": "",
+                "user": "",
+              },
+              "seccompProfile": Object {
+                "localhostProfile": "",
+                "type": "",
+              },
+              "windowsOptions": Object {
+                "gmsaCredentialSpec": "",
+                "gmsaCredentialSpecName": "",
+                "hostProcess": false,
+                "runAsUserName": "",
+              },
+            },
+            "startupProbe": Object {
+              "exec": Object {
+                "command": Array [
+                  "",
+                ],
+              },
+              "failureThreshold": 0,
+              "httpGet": Object {
+                "host": "",
+                "httpHeaders": Array [
+                  Object {
+                    "name": "",
+                    "value": "",
+                  },
+                ],
+                "path": "",
+                "port": 0,
+                "scheme": "",
+              },
+              "initialDelaySeconds": 0,
+              "periodSeconds": 0,
+              "successThreshold": 0,
+              "tcpSocket": Object {
+                "host": "",
+                "port": 0,
+              },
+              "terminationGracePeriodSeconds": 0,
+              "timeoutSeconds": 0,
+            },
+            "stdin": false,
+            "stdinOnce": false,
+            "terminationMessagePath": "",
+            "terminationMessagePolicy": "",
+            "tty": false,
+            "volumeDevices": Array [
+              Object {
+                "devicePath": "",
+                "name": "",
+              },
+            ],
+            "volumeMounts": Array [
+              Object {
+                "mountPath": "",
+                "mountPropagation": "",
+                "name": "",
+                "readOnly": false,
+                "subPath": "",
+                "subPathExpr": "",
+              },
+            ],
+            "workingDir": "",
+          },
+        ],
+        "nodeName": "",
+        "nodeSelector": Object {},
+        "overhead": Object {},
+        "preemptionPolicy": "",
+        "priority": 0,
+        "priorityClassName": "",
+        "readinessGates": Array [
+          Object {
+            "conditionType": "",
+          },
+        ],
+        "restartPolicy": "",
+        "runtimeClassName": "",
+        "schedulerName": "",
+        "securityContext": Object {
+          "fsGroup": 0,
+          "fsGroupChangePolicy": "",
+          "runAsGroup": 0,
+          "runAsNonRoot": false,
+          "runAsUser": 0,
+          "seLinuxOptions": Object {
+            "level": "",
+            "role": "",
+            "type": "",
+            "user": "",
+          },
+          "seccompProfile": Object {
+            "localhostProfile": "",
+            "type": "",
+          },
+          "supplementalGroups": Array [
+            0,
+          ],
+          "sysctls": Array [
+            Object {
+              "name": "",
+              "value": "",
+            },
+          ],
+          "windowsOptions": Object {
+            "gmsaCredentialSpec": "",
+            "gmsaCredentialSpecName": "",
+            "hostProcess": false,
+            "runAsUserName": "",
+          },
+        },
+        "serviceAccount": "",
+        "serviceAccountName": "",
+        "setHostnameAsFQDN": false,
+        "shareProcessNamespace": false,
+        "subdomain": "",
+        "terminationGracePeriodSeconds": 0,
+        "tolerations": Array [
+          Object {
+            "effect": "",
+            "key": "",
+            "operator": "",
+            "tolerationSeconds": 0,
+            "value": "",
+          },
+        ],
+        "topologySpreadConstraints": Array [
+          Object {
+            "labelSelector": Object {
+              "matchExpressions": Array [
+                Object {
+                  "key": "",
+                  "operator": "",
+                  "values": Array [
+                    "",
+                  ],
+                },
+              ],
+              "matchLabels": Object {},
+            },
+            "maxSkew": 0,
+            "topologyKey": "",
+            "whenUnsatisfiable": "",
+          },
+        ],
+        "volumes": Array [
+          Object {
+            "awsElasticBlockStore": Object {
+              "fsType": "",
+              "partition": 0,
+              "readOnly": false,
+              "volumeID": "",
+            },
+            "azureDisk": Object {
+              "cachingMode": "",
+              "diskName": "",
+              "diskURI": "",
+              "fsType": "",
+              "kind": "",
+              "readOnly": false,
+            },
+            "azureFile": Object {
+              "readOnly": false,
+              "secretName": "",
+              "shareName": "",
+            },
+            "cephfs": Object {
+              "monitors": Array [
+                "",
+              ],
+              "path": "",
+              "readOnly": false,
+              "secretFile": "",
+              "secretRef": Object {
+                "name": "",
+              },
+              "user": "",
+            },
+            "cinder": Object {
+              "fsType": "",
+              "readOnly": false,
+              "secretRef": Object {
+                "name": "",
+              },
+              "volumeID": "",
+            },
+            "configMap": Object {
+              "defaultMode": 0,
+              "items": Array [
+                Object {
+                  "key": "",
+                  "mode": 0,
+                  "path": "",
+                },
+              ],
+              "name": "",
+              "optional": false,
+            },
+            "csi": Object {
+              "driver": "",
+              "fsType": "",
+              "nodePublishSecretRef": Object {
+                "name": "",
+              },
+              "readOnly": false,
+              "volumeAttributes": Object {},
+            },
+            "downwardAPI": Object {
+              "defaultMode": 0,
+              "items": Array [
+                Object {
+                  "fieldRef": Object {
+                    "apiVersion": "",
+                    "fieldPath": "",
+                  },
+                  "mode": 0,
+                  "path": "",
+                  "resourceFieldRef": Object {
+                    "containerName": "",
+                    "divisor": "",
+                    "resource": "",
+                  },
+                },
+              ],
+            },
+            "emptyDir": Object {
+              "medium": "",
+              "sizeLimit": "",
+            },
+            "ephemeral": Object {
+              "volumeClaimTemplate": Object {
+                "metadata": Object {
+                  "annotations": Object {},
+                  "clusterName": "",
+                  "creationTimestamp": "",
+                  "deletionGracePeriodSeconds": 0,
+                  "deletionTimestamp": "",
+                  "finalizers": Array [
+                    "",
+                  ],
+                  "generateName": "",
+                  "generation": 0,
+                  "labels": Object {},
+                  "managedFields": Array [
+                    Object {
+                      "apiVersion": "",
+                      "fieldsType": "",
+                      "fieldsV1": Object {},
+                      "manager": "",
+                      "operation": "",
+                      "subresource": "",
+                      "time": "",
+                    },
+                  ],
+                  "name": "",
+                  "namespace": "",
+                  "ownerReferences": Array [
+                    Object {
+                      "apiVersion": "",
+                      "blockOwnerDeletion": false,
+                      "controller": false,
+                      "kind": "",
+                      "name": "",
+                      "uid": "",
+                    },
+                  ],
+                  "resourceVersion": "",
+                  "selfLink": "",
+                  "uid": "",
+                },
+                "spec": Object {
+                  "accessModes": Array [
+                    "",
+                  ],
+                  "dataSource": Object {
+                    "apiGroup": "",
+                    "kind": "",
+                    "name": "",
+                  },
+                  "dataSourceRef": Object {
+                    "apiGroup": "",
+                    "kind": "",
+                    "name": "",
+                  },
+                  "resources": Object {
+                    "limits": Object {},
+                    "requests": Object {},
+                  },
+                  "selector": Object {
+                    "matchExpressions": Array [
+                      Object {
+                        "key": "",
+                        "operator": "",
+                        "values": Array [
+                          "",
+                        ],
+                      },
+                    ],
+                    "matchLabels": Object {},
+                  },
+                  "storageClassName": "",
+                  "volumeMode": "",
+                  "volumeName": "",
+                },
+              },
+            },
+            "fc": Object {
+              "fsType": "",
+              "lun": 0,
+              "readOnly": false,
+              "targetWWNs": Array [
+                "",
+              ],
+              "wwids": Array [
+                "",
+              ],
+            },
+            "flexVolume": Object {
+              "driver": "",
+              "fsType": "",
+              "options": Object {},
+              "readOnly": false,
+              "secretRef": Object {
+                "name": "",
+              },
+            },
+            "flocker": Object {
+              "datasetName": "",
+              "datasetUUID": "",
+            },
+            "gcePersistentDisk": Object {
+              "fsType": "",
+              "partition": 0,
+              "pdName": "",
+              "readOnly": false,
+            },
+            "gitRepo": Object {
+              "directory": "",
+              "repository": "",
+              "revision": "",
+            },
+            "glusterfs": Object {
+              "endpoints": "",
+              "path": "",
+              "readOnly": false,
+            },
+            "hostPath": Object {
+              "path": "",
+              "type": "",
+            },
+            "iscsi": Object {
+              "chapAuthDiscovery": false,
+              "chapAuthSession": false,
+              "fsType": "",
+              "initiatorName": "",
+              "iqn": "",
+              "iscsiInterface": "",
+              "lun": 0,
+              "portals": Array [
+                "",
+              ],
+              "readOnly": false,
+              "secretRef": Object {
+                "name": "",
+              },
+              "targetPortal": "",
+            },
+            "name": "",
+            "nfs": Object {
+              "path": "",
+              "readOnly": false,
+              "server": "",
+            },
+            "persistentVolumeClaim": Object {
+              "claimName": "",
+              "readOnly": false,
+            },
+            "photonPersistentDisk": Object {
+              "fsType": "",
+              "pdID": "",
+            },
+            "portworxVolume": Object {
+              "fsType": "",
+              "readOnly": false,
+              "volumeID": "",
+            },
+            "projected": Object {
+              "defaultMode": 0,
+              "sources": Array [
+                Object {
+                  "configMap": Object {
+                    "items": Array [
+                      Object {
+                        "key": "",
+                        "mode": 0,
+                        "path": "",
+                      },
+                    ],
+                    "name": "",
+                    "optional": false,
+                  },
+                  "downwardAPI": Object {
+                    "items": Array [
+                      Object {
+                        "fieldRef": Object {
+                          "apiVersion": "",
+                          "fieldPath": "",
+                        },
+                        "mode": 0,
+                        "path": "",
+                        "resourceFieldRef": Object {
+                          "containerName": "",
+                          "divisor": "",
+                          "resource": "",
+                        },
+                      },
+                    ],
+                  },
+                  "secret": Object {
+                    "items": Array [
+                      Object {
+                        "key": "",
+                        "mode": 0,
+                        "path": "",
+                      },
+                    ],
+                    "name": "",
+                    "optional": false,
+                  },
+                  "serviceAccountToken": Object {
+                    "audience": "",
+                    "expirationSeconds": 0,
+                    "path": "",
+                  },
+                },
+              ],
+            },
+            "quobyte": Object {
+              "group": "",
+              "readOnly": false,
+              "registry": "",
+              "tenant": "",
+              "user": "",
+              "volume": "",
+            },
+            "rbd": Object {
+              "fsType": "",
+              "image": "",
+              "keyring": "",
+              "monitors": Array [
+                "",
+              ],
+              "pool": "",
+              "readOnly": false,
+              "secretRef": Object {
+                "name": "",
+              },
+              "user": "",
+            },
+            "scaleIO": Object {
+              "fsType": "",
+              "gateway": "",
+              "protectionDomain": "",
+              "readOnly": false,
+              "secretRef": Object {
+                "name": "",
+              },
+              "sslEnabled": false,
+              "storageMode": "",
+              "storagePool": "",
+              "system": "",
+              "volumeName": "",
+            },
+            "secret": Object {
+              "defaultMode": 0,
+              "items": Array [
+                Object {
+                  "key": "",
+                  "mode": 0,
+                  "path": "",
+                },
+              ],
+              "optional": false,
+              "secretName": "",
+            },
+            "storageos": Object {
+              "fsType": "",
+              "readOnly": false,
+              "secretRef": Object {
+                "name": "",
+              },
+              "volumeName": "",
+              "volumeNamespace": "",
+            },
+            "vsphereVolume": Object {
+              "fsType": "",
+              "storagePolicyID": "",
+              "storagePolicyName": "",
+              "volumePath": "",
+            },
+          },
+        ],
+      },
+    },
+  },
+  "status": Object {
+    "availableReplicas": 0,
+    "collisionCount": 0,
+    "conditions": Array [
+      Object {
+        "lastTransitionTime": "",
+        "lastUpdateTime": "",
+        "message": "",
+        "reason": "",
+        "status": "",
+        "type": "",
+      },
+    ],
+    "observedGeneration": 0,
+    "readyReplicas": 0,
+    "replicas": 0,
+    "unavailableReplicas": 0,
+    "updatedReplicas": 0,
+  },
+}
+`;
