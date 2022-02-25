@@ -16,6 +16,6 @@ export interface Cart {
 const user: User = { name: "" };
 const item: Item = { id: "", name: "", cost: 0 };
 const cart: Cart = {
-  user: { ...user },
+  user: { name: "" },
   items: [item, { id: "", name: "", cost: 0 }],
 };
