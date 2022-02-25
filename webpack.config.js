@@ -16,11 +16,15 @@ const config = {
     path: path.resolve(__dirname, "dist"),
     filename: "extension.js",
     libraryTarget: "commonjs2",
+    devtoolModuleFilenameTemplate: "../[resource-path]",
+  },
+  optimization: {
+    minimize: false, // ビルドが終わらない
   },
   devtool: "nosources-source-map",
   externals: {
-    typescript: "typescript",
-    prettier: "prettier",
+    // typescript: "typescript",
+    // prettier: "prettier",
     vscode: "commonjs vscode",
   },
   plugins: [

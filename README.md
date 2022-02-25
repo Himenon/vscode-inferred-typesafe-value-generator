@@ -1,8 +1,13 @@
-# Generate Inferred Value
+# [TypeScript Inferred TypeSafe Value Generator](https://github.com/Himenon/vscode-inferred-typesafe-value-generator)
+
+Extension for vscode, which generates the value of a variable from a type definition.
 
 ![DEMO](./demo.gif)
 
-- Generating a value from a variable type definition
+## Features
+
+- Generates a value from a variable's type definition.
+- Outputs values in a form that merges existing values if they exist.
 
 ## Command
 

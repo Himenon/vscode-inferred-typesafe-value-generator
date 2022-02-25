@@ -17,6 +17,13 @@ $ yarn watch
 
 - `Run Extension` (in vscode)
 
+## Check vsix
+
+```bash
+vsce package 0.0.2
+code --install-extension inferred-typesafe-value-generator-0.0.2.vsix
+```
+
 ## Architecture
 
 ```mermaid

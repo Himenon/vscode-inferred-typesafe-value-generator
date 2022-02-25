@@ -10,3 +10,10 @@ vsc-extension-quickstart.md
 **/.eslintrc.json
 **/*.map
 **/*.ts
+jest.config.js
+CONTRIBUTIONS.md
+example/**
+*.gif
+.github/**
+.prettierignore
+.swcrc
