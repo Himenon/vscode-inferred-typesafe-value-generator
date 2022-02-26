@@ -1,7 +1,7 @@
 {
 	"name": "typescript-inferred-typesafe-value-generator",
 	"displayName": "TypeScript Inferred TypeSafe Value Generator",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"private": true,
 	"description": "Automatically generates values inferred from type definitions.",
 	"categories": [
