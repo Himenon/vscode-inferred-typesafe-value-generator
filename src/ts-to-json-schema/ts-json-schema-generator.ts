@@ -6,7 +6,7 @@ import { DateParser } from "./NodeParser/DateParser";
 import { FunctionNodeParser } from "./NodeParser/FunctionNodeParser";
 import { FunctionTypeFormatter } from "./TypeFormatter";
 import type { GetTypeName } from "../ts-ast-utils/get-type-name";
-import type { JSONSchema7 as Schema } from "json-schema";
+import type { JSONSchema7 as Schema, JSONSchema7TypeName as JSONSchemaTypeName } from "json-schema";
 
 export interface GenerateJsonSchemaArgs {
   files: string[];
@@ -47,6 +47,13 @@ export const generate = (args: GenerateJsonSchemaArgs): Schema => {
     prs.addNodeParser(new DateParser());
   });
   const generator = new tsj.SchemaGenerator(program, parser, formatter, config);
+
+  if (args.typeName.isPrimtive) {
+    return {
+      type: args.typeName.firstTypeName as JSONSchemaTypeName,
+    };
+  }
+
   if (args.typeName.isIntersectionType) {
     const schemas = args.typeName.intersectinoTypeNames.map((target) => generator.createSchema(target.firstTypeName));
     return schemas.reduce<Schema>((previous, current) => {

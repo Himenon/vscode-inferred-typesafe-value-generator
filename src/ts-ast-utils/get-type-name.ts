@@ -3,10 +3,17 @@ import * as ts from "typescript";
 export interface GetTypeName {
   isUnknown: boolean;
   firstTypeName: string;
+  isPrimtive?: true;
   isArray: boolean;
   intersectinoTypeNames: GetTypeName[];
   isIntersectionType: boolean;
 }
+
+const PrimitiveNameMap = {
+  [ts.SyntaxKind.NumberKeyword.toString()]: "number",
+  [ts.SyntaxKind.BooleanKeyword.toString()]: "boolean",
+  [ts.SyntaxKind.StringKeyword.toString()]: "string",
+};
 
 export const getTypeName = (node: ts.Node): GetTypeName => {
   if (ts.isTypeReferenceNode(node)) {
@@ -40,6 +47,16 @@ export const getTypeName = (node: ts.Node): GetTypeName => {
       isArray: false,
       intersectinoTypeNames: intersectinoTypeNames,
       isIntersectionType: true,
+      isUnknown: false,
+    };
+  }
+  if (Object.keys(PrimitiveNameMap).includes(node.kind.toString())) {
+    return {
+      firstTypeName: PrimitiveNameMap[node.kind.toString()],
+      isPrimtive: true,
+      isArray: false,
+      intersectinoTypeNames: [],
+      isIntersectionType: false,
       isUnknown: false,
     };
   }

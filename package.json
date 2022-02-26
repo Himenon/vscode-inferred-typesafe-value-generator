@@ -46,7 +46,7 @@
 		"test-watch": "tsc -watch -p tsconfig.json",
 		"test:run": "node ./out/src/test/runTest.js",
 		"vscode:prepublish": "yarn run package",
-		"watch": "webpack --watch"
+		"watch": "NODE_ENV=development webpack --watch"
 	},
 	"contributes": {
 		"commands": [
