@@ -11,14 +11,17 @@ export interface MergeArgs {
 
 type CreateVisit = (originalValueTypeNode: ts.Node) => (correctTypeNode: ts.Node) => ts.Node;
 
-/**
- * correctTypeが"text", 1の場合
- * @param args
- * @returns
- */
-const mergePrimtiveExpression = (args: MergeArgs) => {
-  const { differentType, originalValueTypeNode, correctTypeNode } = args;
+const firstFallbackTypeNode = (originalValueTypeNode: ts.Node, correctTypeNode: ts.Node) => {
   if (TypeCheck.isIdentifier(originalValueTypeNode)) {
+    return cloneNode(originalValueTypeNode);
+  }
+  if (ts.isBinaryExpression(originalValueTypeNode)) {
+    return cloneNode(originalValueTypeNode);
+  }
+  if (ts.isPropertyAccessExpression(originalValueTypeNode)) {
+    return cloneNode(originalValueTypeNode);
+  }
+  if (ts.isNonNullExpression(originalValueTypeNode)) {
     return cloneNode(originalValueTypeNode);
   }
   if (TypeCheck.isAwaitExpression(originalValueTypeNode)) {
@@ -27,13 +30,22 @@ const mergePrimtiveExpression = (args: MergeArgs) => {
   if (TypeCheck.isCallExpression(originalValueTypeNode)) {
     return cloneNode(originalValueTypeNode);
   }
-  // @example new Klass()
   if (TypeCheck.isNewExpression(originalValueTypeNode)) {
     return cloneNode(originalValueTypeNode);
   }
+  return cloneNode(correctTypeNode);
+};
+
+/**
+ * correctTypeが"text", 1の場合
+ * @param args
+ * @returns
+ */
+const mergePrimtiveExpression = (args: MergeArgs) => {
+  const { differentType, originalValueTypeNode, correctTypeNode } = args;
   // 変数定義よりも優先度が低い。// 型定義が異なる場合は正しい方を最優先で合わせる
   if (differentType) {
-    return cloneNode(correctTypeNode);
+    return firstFallbackTypeNode(originalValueTypeNode, correctTypeNode);
   }
   return cloneNode(originalValueTypeNode);
 };
@@ -45,24 +57,11 @@ const mergePrimtiveExpression = (args: MergeArgs) => {
  */
 const mergeSyntaxKindExpression = (args: MergeArgs) => {
   const { differentType, originalValueTypeNode, correctTypeNode } = args;
-  if (TypeCheck.isIdentifier(originalValueTypeNode)) {
-    return cloneNode(originalValueTypeNode);
-  }
-  if (TypeCheck.isAwaitExpression(originalValueTypeNode)) {
-    return cloneNode(originalValueTypeNode);
-  }
-  if (TypeCheck.isCallExpression(originalValueTypeNode)) {
-    return cloneNode(originalValueTypeNode);
-  }
-  // @example new Klass()
-  if (TypeCheck.isNewExpression(originalValueTypeNode)) {
-    return cloneNode(originalValueTypeNode);
-  }
   // SyntaxKindが直接比較の対象の場合は型は同じなため、値が異なる場合は既存のものに合わせる
   if (differentType && TypeCheck.isSyntaxKindExpression(originalValueTypeNode)) {
     return cloneNode(originalValueTypeNode);
   }
-  return cloneNode(correctTypeNode);
+  return firstFallbackTypeNode(originalValueTypeNode, correctTypeNode);
 };
 
 const getKeyTextFromPropertyName = (propertyName: ts.PropertyName) => {
@@ -86,22 +85,6 @@ const getKeyTextFromPropertyName = (propertyName: ts.PropertyName) => {
     return propertyName.expression.getText();
   }
   throw new Error(`What?`);
-};
-
-const firstFallbackTypeNode = (originalValueTypeNode: ts.Node, correctTypeNode: ts.Node) => {
-  if (TypeCheck.isIdentifier(originalValueTypeNode)) {
-    return cloneNode(originalValueTypeNode);
-  }
-  if (TypeCheck.isAwaitExpression(originalValueTypeNode)) {
-    return cloneNode(originalValueTypeNode);
-  }
-  if (TypeCheck.isCallExpression(originalValueTypeNode)) {
-    return cloneNode(originalValueTypeNode);
-  }
-  if (TypeCheck.isNewExpression(originalValueTypeNode)) {
-    return cloneNode(originalValueTypeNode);
-  }
-  return cloneNode(correctTypeNode);
 };
 
 const mergeArrayExpression = (
