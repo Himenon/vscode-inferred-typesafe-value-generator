@@ -63,7 +63,7 @@ export const completion = ({ filename, code, lineNumber, columNumber }: Completi
     };
   }
 
-  Logger.log("RUN: TsToJsonSchema.generateJsonSchema");
+  Logger.log(`RUN: TsToJsonSchema.generateJsonSchema. TypeName = ${getTypeName(valueTypeNode).firstTypeName}`);
   const { jsonSchema, errorMessage } = TsToJsonSchema.generateJsonSchema({
     files: [filename],
     typeName: getTypeName(valueTypeNode),

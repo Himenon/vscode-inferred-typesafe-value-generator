@@ -10,9 +10,7 @@ Object {
     "creationTimestamp": "",
     "deletionGracePeriodSeconds": 0,
     "deletionTimestamp": "",
-    "finalizers": Array [
-      "",
-    ],
+    "finalizers": Array [],
     "generateName": "",
     "generation": 0,
     "labels": Object {},
@@ -24,7 +22,7 @@ Object {
         "manager": "",
         "operation": "",
         "subresource": "",
-        "time": "",
+        "time": undefined,
       },
     ],
     "name": "",
@@ -54,9 +52,7 @@ Object {
         Object {
           "key": "",
           "operator": "",
-          "values": Array [
-            "",
-          ],
+          "values": Array [],
         },
       ],
       "matchLabels": Object {},
@@ -72,12 +68,10 @@ Object {
       "metadata": Object {
         "annotations": Object {},
         "clusterName": "",
-        "creationTimestamp": "",
+        "creationTimestamp": undefined,
         "deletionGracePeriodSeconds": 0,
-        "deletionTimestamp": "",
-        "finalizers": Array [
-          "",
-        ],
+        "deletionTimestamp": undefined,
+        "finalizers": Array [],
         "generateName": "",
         "generation": 0,
         "labels": Object {},
@@ -89,7 +83,7 @@ Object {
             "manager": "",
             "operation": "",
             "subresource": "",
-            "time": "",
+            "time": undefined,
           },
         ],
         "name": "",
@@ -119,18 +113,14 @@ Object {
                     Object {
                       "key": "",
                       "operator": "",
-                      "values": Array [
-                        "",
-                      ],
+                      "values": Array [],
                     },
                   ],
                   "matchFields": Array [
                     Object {
                       "key": "",
                       "operator": "",
-                      "values": Array [
-                        "",
-                      ],
+                      "values": Array [],
                     },
                   ],
                 },
@@ -140,24 +130,8 @@ Object {
             "requiredDuringSchedulingIgnoredDuringExecution": Object {
               "nodeSelectorTerms": Array [
                 Object {
-                  "matchExpressions": Array [
-                    Object {
-                      "key": "",
-                      "operator": "",
-                      "values": Array [
-                        "",
-                      ],
-                    },
-                  ],
-                  "matchFields": Array [
-                    Object {
-                      "key": "",
-                      "operator": "",
-                      "values": Array [
-                        "",
-                      ],
-                    },
-                  ],
+                  "matchExpressions": Array [],
+                  "matchFields": Array [],
                 },
               ],
             },
@@ -171,28 +145,13 @@ Object {
                       Object {
                         "key": "",
                         "operator": "",
-                        "values": Array [
-                          "",
-                        ],
+                        "values": Array [],
                       },
                     ],
                     "matchLabels": Object {},
                   },
-                  "namespaceSelector": Object {
-                    "matchExpressions": Array [
-                      Object {
-                        "key": "",
-                        "operator": "",
-                        "values": Array [
-                          "",
-                        ],
-                      },
-                    ],
-                    "matchLabels": Object {},
-                  },
-                  "namespaces": Array [
-                    "",
-                  ],
+                  "namespaceSelector": undefined,
+                  "namespaces": Array [],
                   "topologyKey": "",
                 },
                 "weight": 0,
@@ -200,33 +159,9 @@ Object {
             ],
             "requiredDuringSchedulingIgnoredDuringExecution": Array [
               Object {
-                "labelSelector": Object {
-                  "matchExpressions": Array [
-                    Object {
-                      "key": "",
-                      "operator": "",
-                      "values": Array [
-                        "",
-                      ],
-                    },
-                  ],
-                  "matchLabels": Object {},
-                },
-                "namespaceSelector": Object {
-                  "matchExpressions": Array [
-                    Object {
-                      "key": "",
-                      "operator": "",
-                      "values": Array [
-                        "",
-                      ],
-                    },
-                  ],
-                  "matchLabels": Object {},
-                },
-                "namespaces": Array [
-                  "",
-                ],
+                "labelSelector": undefined,
+                "namespaceSelector": undefined,
+                "namespaces": Array [],
                 "topologyKey": "",
               },
             ],
@@ -234,82 +169,18 @@ Object {
           "podAntiAffinity": Object {
             "preferredDuringSchedulingIgnoredDuringExecution": Array [
               Object {
-                "podAffinityTerm": Object {
-                  "labelSelector": Object {
-                    "matchExpressions": Array [
-                      Object {
-                        "key": "",
-                        "operator": "",
-                        "values": Array [
-                          "",
-                        ],
-                      },
-                    ],
-                    "matchLabels": Object {},
-                  },
-                  "namespaceSelector": Object {
-                    "matchExpressions": Array [
-                      Object {
-                        "key": "",
-                        "operator": "",
-                        "values": Array [
-                          "",
-                        ],
-                      },
-                    ],
-                    "matchLabels": Object {},
-                  },
-                  "namespaces": Array [
-                    "",
-                  ],
-                  "topologyKey": "",
-                },
+                "podAffinityTerm": undefined,
                 "weight": 0,
               },
             ],
-            "requiredDuringSchedulingIgnoredDuringExecution": Array [
-              Object {
-                "labelSelector": Object {
-                  "matchExpressions": Array [
-                    Object {
-                      "key": "",
-                      "operator": "",
-                      "values": Array [
-                        "",
-                      ],
-                    },
-                  ],
-                  "matchLabels": Object {},
-                },
-                "namespaceSelector": Object {
-                  "matchExpressions": Array [
-                    Object {
-                      "key": "",
-                      "operator": "",
-                      "values": Array [
-                        "",
-                      ],
-                    },
-                  ],
-                  "matchLabels": Object {},
-                },
-                "namespaces": Array [
-                  "",
-                ],
-                "topologyKey": "",
-              },
-            ],
+            "requiredDuringSchedulingIgnoredDuringExecution": Array [],
           },
         },
         "automountServiceAccountToken": false,
         "containers": Array [
           Object {
-            "args": Array [
-              "",
-            ],
-            "command": Array [
-              "",
-            ],
+            "args": Array [],
+            "command": Array [],
             "env": Array [
               Object {
                 "name": "",
@@ -355,9 +226,7 @@ Object {
             "lifecycle": Object {
               "postStart": Object {
                 "exec": Object {
-                  "command": Array [
-                    "",
-                  ],
+                  "command": Array [],
                 },
                 "httpGet": Object {
                   "host": "",
@@ -368,19 +237,17 @@ Object {
                     },
                   ],
                   "path": "",
-                  "port": 0,
+                  "port": undefined,
                   "scheme": "",
                 },
                 "tcpSocket": Object {
                   "host": "",
-                  "port": 0,
+                  "port": undefined,
                 },
               },
               "preStop": Object {
                 "exec": Object {
-                  "command": Array [
-                    "",
-                  ],
+                  "command": Array [],
                 },
                 "httpGet": Object {
                   "host": "",
@@ -391,41 +258,23 @@ Object {
                     },
                   ],
                   "path": "",
-                  "port": 0,
+                  "port": undefined,
                   "scheme": "",
                 },
                 "tcpSocket": Object {
                   "host": "",
-                  "port": 0,
+                  "port": undefined,
                 },
               },
             },
             "livenessProbe": Object {
-              "exec": Object {
-                "command": Array [
-                  "",
-                ],
-              },
+              "exec": undefined,
               "failureThreshold": 0,
-              "httpGet": Object {
-                "host": "",
-                "httpHeaders": Array [
-                  Object {
-                    "name": "",
-                    "value": "",
-                  },
-                ],
-                "path": "",
-                "port": 0,
-                "scheme": "",
-              },
+              "httpGet": undefined,
               "initialDelaySeconds": 0,
               "periodSeconds": 0,
               "successThreshold": 0,
-              "tcpSocket": Object {
-                "host": "",
-                "port": 0,
-              },
+              "tcpSocket": undefined,
               "terminationGracePeriodSeconds": 0,
               "timeoutSeconds": 0,
             },
@@ -440,31 +289,13 @@ Object {
               },
             ],
             "readinessProbe": Object {
-              "exec": Object {
-                "command": Array [
-                  "",
-                ],
-              },
+              "exec": undefined,
               "failureThreshold": 0,
-              "httpGet": Object {
-                "host": "",
-                "httpHeaders": Array [
-                  Object {
-                    "name": "",
-                    "value": "",
-                  },
-                ],
-                "path": "",
-                "port": 0,
-                "scheme": "",
-              },
+              "httpGet": undefined,
               "initialDelaySeconds": 0,
               "periodSeconds": 0,
               "successThreshold": 0,
-              "tcpSocket": Object {
-                "host": "",
-                "port": 0,
-              },
+              "tcpSocket": undefined,
               "terminationGracePeriodSeconds": 0,
               "timeoutSeconds": 0,
             },
@@ -475,12 +306,8 @@ Object {
             "securityContext": Object {
               "allowPrivilegeEscalation": false,
               "capabilities": Object {
-                "add": Array [
-                  "",
-                ],
-                "drop": Array [
-                  "",
-                ],
+                "add": Array [],
+                "drop": Array [],
               },
               "privileged": false,
               "procMount": "",
@@ -505,35 +332,7 @@ Object {
                 "runAsUserName": "",
               },
             },
-            "startupProbe": Object {
-              "exec": Object {
-                "command": Array [
-                  "",
-                ],
-              },
-              "failureThreshold": 0,
-              "httpGet": Object {
-                "host": "",
-                "httpHeaders": Array [
-                  Object {
-                    "name": "",
-                    "value": "",
-                  },
-                ],
-                "path": "",
-                "port": 0,
-                "scheme": "",
-              },
-              "initialDelaySeconds": 0,
-              "periodSeconds": 0,
-              "successThreshold": 0,
-              "tcpSocket": Object {
-                "host": "",
-                "port": 0,
-              },
-              "terminationGracePeriodSeconds": 0,
-              "timeoutSeconds": 0,
-            },
+            "startupProbe": undefined,
             "stdin": false,
             "stdinOnce": false,
             "terminationMessagePath": "",
@@ -559,29 +358,21 @@ Object {
           },
         ],
         "dnsConfig": Object {
-          "nameservers": Array [
-            "",
-          ],
+          "nameservers": Array [],
           "options": Array [
             Object {
               "name": "",
               "value": "",
             },
           ],
-          "searches": Array [
-            "",
-          ],
+          "searches": Array [],
         },
         "dnsPolicy": "",
         "enableServiceLinks": false,
         "ephemeralContainers": Array [
           Object {
-            "args": Array [
-              "",
-            ],
-            "command": Array [
-              "",
-            ],
+            "args": Array [],
+            "command": Array [],
             "env": Array [
               Object {
                 "name": "",
@@ -625,82 +416,10 @@ Object {
             "image": "",
             "imagePullPolicy": "",
             "lifecycle": Object {
-              "postStart": Object {
-                "exec": Object {
-                  "command": Array [
-                    "",
-                  ],
-                },
-                "httpGet": Object {
-                  "host": "",
-                  "httpHeaders": Array [
-                    Object {
-                      "name": "",
-                      "value": "",
-                    },
-                  ],
-                  "path": "",
-                  "port": 0,
-                  "scheme": "",
-                },
-                "tcpSocket": Object {
-                  "host": "",
-                  "port": 0,
-                },
-              },
-              "preStop": Object {
-                "exec": Object {
-                  "command": Array [
-                    "",
-                  ],
-                },
-                "httpGet": Object {
-                  "host": "",
-                  "httpHeaders": Array [
-                    Object {
-                      "name": "",
-                      "value": "",
-                    },
-                  ],
-                  "path": "",
-                  "port": 0,
-                  "scheme": "",
-                },
-                "tcpSocket": Object {
-                  "host": "",
-                  "port": 0,
-                },
-              },
+              "postStart": undefined,
+              "preStop": undefined,
             },
-            "livenessProbe": Object {
-              "exec": Object {
-                "command": Array [
-                  "",
-                ],
-              },
-              "failureThreshold": 0,
-              "httpGet": Object {
-                "host": "",
-                "httpHeaders": Array [
-                  Object {
-                    "name": "",
-                    "value": "",
-                  },
-                ],
-                "path": "",
-                "port": 0,
-                "scheme": "",
-              },
-              "initialDelaySeconds": 0,
-              "periodSeconds": 0,
-              "successThreshold": 0,
-              "tcpSocket": Object {
-                "host": "",
-                "port": 0,
-              },
-              "terminationGracePeriodSeconds": 0,
-              "timeoutSeconds": 0,
-            },
+            "livenessProbe": undefined,
             "name": "",
             "ports": Array [
               Object {
@@ -711,35 +430,7 @@ Object {
                 "protocol": "",
               },
             ],
-            "readinessProbe": Object {
-              "exec": Object {
-                "command": Array [
-                  "",
-                ],
-              },
-              "failureThreshold": 0,
-              "httpGet": Object {
-                "host": "",
-                "httpHeaders": Array [
-                  Object {
-                    "name": "",
-                    "value": "",
-                  },
-                ],
-                "path": "",
-                "port": 0,
-                "scheme": "",
-              },
-              "initialDelaySeconds": 0,
-              "periodSeconds": 0,
-              "successThreshold": 0,
-              "tcpSocket": Object {
-                "host": "",
-                "port": 0,
-              },
-              "terminationGracePeriodSeconds": 0,
-              "timeoutSeconds": 0,
-            },
+            "readinessProbe": undefined,
             "resources": Object {
               "limits": Object {},
               "requests": Object {},
@@ -747,12 +438,8 @@ Object {
             "securityContext": Object {
               "allowPrivilegeEscalation": false,
               "capabilities": Object {
-                "add": Array [
-                  "",
-                ],
-                "drop": Array [
-                  "",
-                ],
+                "add": Array [],
+                "drop": Array [],
               },
               "privileged": false,
               "procMount": "",
@@ -777,35 +464,7 @@ Object {
                 "runAsUserName": "",
               },
             },
-            "startupProbe": Object {
-              "exec": Object {
-                "command": Array [
-                  "",
-                ],
-              },
-              "failureThreshold": 0,
-              "httpGet": Object {
-                "host": "",
-                "httpHeaders": Array [
-                  Object {
-                    "name": "",
-                    "value": "",
-                  },
-                ],
-                "path": "",
-                "port": 0,
-                "scheme": "",
-              },
-              "initialDelaySeconds": 0,
-              "periodSeconds": 0,
-              "successThreshold": 0,
-              "tcpSocket": Object {
-                "host": "",
-                "port": 0,
-              },
-              "terminationGracePeriodSeconds": 0,
-              "timeoutSeconds": 0,
-            },
+            "startupProbe": undefined,
             "stdin": false,
             "stdinOnce": false,
             "targetContainerName": "",
@@ -833,9 +492,7 @@ Object {
         ],
         "hostAliases": Array [
           Object {
-            "hostnames": Array [
-              "",
-            ],
+            "hostnames": Array [],
             "ip": "",
           },
         ],
@@ -850,257 +507,27 @@ Object {
         ],
         "initContainers": Array [
           Object {
-            "args": Array [
-              "",
-            ],
-            "command": Array [
-              "",
-            ],
-            "env": Array [
-              Object {
-                "name": "",
-                "value": "",
-                "valueFrom": Object {
-                  "configMapKeyRef": Object {
-                    "key": "",
-                    "name": "",
-                    "optional": false,
-                  },
-                  "fieldRef": Object {
-                    "apiVersion": "",
-                    "fieldPath": "",
-                  },
-                  "resourceFieldRef": Object {
-                    "containerName": "",
-                    "divisor": "",
-                    "resource": "",
-                  },
-                  "secretKeyRef": Object {
-                    "key": "",
-                    "name": "",
-                    "optional": false,
-                  },
-                },
-              },
-            ],
-            "envFrom": Array [
-              Object {
-                "configMapRef": Object {
-                  "name": "",
-                  "optional": false,
-                },
-                "prefix": "",
-                "secretRef": Object {
-                  "name": "",
-                  "optional": false,
-                },
-              },
-            ],
+            "args": Array [],
+            "command": Array [],
+            "env": Array [],
+            "envFrom": Array [],
             "image": "",
             "imagePullPolicy": "",
-            "lifecycle": Object {
-              "postStart": Object {
-                "exec": Object {
-                  "command": Array [
-                    "",
-                  ],
-                },
-                "httpGet": Object {
-                  "host": "",
-                  "httpHeaders": Array [
-                    Object {
-                      "name": "",
-                      "value": "",
-                    },
-                  ],
-                  "path": "",
-                  "port": 0,
-                  "scheme": "",
-                },
-                "tcpSocket": Object {
-                  "host": "",
-                  "port": 0,
-                },
-              },
-              "preStop": Object {
-                "exec": Object {
-                  "command": Array [
-                    "",
-                  ],
-                },
-                "httpGet": Object {
-                  "host": "",
-                  "httpHeaders": Array [
-                    Object {
-                      "name": "",
-                      "value": "",
-                    },
-                  ],
-                  "path": "",
-                  "port": 0,
-                  "scheme": "",
-                },
-                "tcpSocket": Object {
-                  "host": "",
-                  "port": 0,
-                },
-              },
-            },
-            "livenessProbe": Object {
-              "exec": Object {
-                "command": Array [
-                  "",
-                ],
-              },
-              "failureThreshold": 0,
-              "httpGet": Object {
-                "host": "",
-                "httpHeaders": Array [
-                  Object {
-                    "name": "",
-                    "value": "",
-                  },
-                ],
-                "path": "",
-                "port": 0,
-                "scheme": "",
-              },
-              "initialDelaySeconds": 0,
-              "periodSeconds": 0,
-              "successThreshold": 0,
-              "tcpSocket": Object {
-                "host": "",
-                "port": 0,
-              },
-              "terminationGracePeriodSeconds": 0,
-              "timeoutSeconds": 0,
-            },
+            "lifecycle": undefined,
+            "livenessProbe": undefined,
             "name": "",
-            "ports": Array [
-              Object {
-                "containerPort": 0,
-                "hostIP": "",
-                "hostPort": 0,
-                "name": "",
-                "protocol": "",
-              },
-            ],
-            "readinessProbe": Object {
-              "exec": Object {
-                "command": Array [
-                  "",
-                ],
-              },
-              "failureThreshold": 0,
-              "httpGet": Object {
-                "host": "",
-                "httpHeaders": Array [
-                  Object {
-                    "name": "",
-                    "value": "",
-                  },
-                ],
-                "path": "",
-                "port": 0,
-                "scheme": "",
-              },
-              "initialDelaySeconds": 0,
-              "periodSeconds": 0,
-              "successThreshold": 0,
-              "tcpSocket": Object {
-                "host": "",
-                "port": 0,
-              },
-              "terminationGracePeriodSeconds": 0,
-              "timeoutSeconds": 0,
-            },
-            "resources": Object {
-              "limits": Object {},
-              "requests": Object {},
-            },
-            "securityContext": Object {
-              "allowPrivilegeEscalation": false,
-              "capabilities": Object {
-                "add": Array [
-                  "",
-                ],
-                "drop": Array [
-                  "",
-                ],
-              },
-              "privileged": false,
-              "procMount": "",
-              "readOnlyRootFilesystem": false,
-              "runAsGroup": 0,
-              "runAsNonRoot": false,
-              "runAsUser": 0,
-              "seLinuxOptions": Object {
-                "level": "",
-                "role": "",
-                "type": "",
-                "user": "",
-              },
-              "seccompProfile": Object {
-                "localhostProfile": "",
-                "type": "",
-              },
-              "windowsOptions": Object {
-                "gmsaCredentialSpec": "",
-                "gmsaCredentialSpecName": "",
-                "hostProcess": false,
-                "runAsUserName": "",
-              },
-            },
-            "startupProbe": Object {
-              "exec": Object {
-                "command": Array [
-                  "",
-                ],
-              },
-              "failureThreshold": 0,
-              "httpGet": Object {
-                "host": "",
-                "httpHeaders": Array [
-                  Object {
-                    "name": "",
-                    "value": "",
-                  },
-                ],
-                "path": "",
-                "port": 0,
-                "scheme": "",
-              },
-              "initialDelaySeconds": 0,
-              "periodSeconds": 0,
-              "successThreshold": 0,
-              "tcpSocket": Object {
-                "host": "",
-                "port": 0,
-              },
-              "terminationGracePeriodSeconds": 0,
-              "timeoutSeconds": 0,
-            },
+            "ports": Array [],
+            "readinessProbe": undefined,
+            "resources": undefined,
+            "securityContext": undefined,
+            "startupProbe": undefined,
             "stdin": false,
             "stdinOnce": false,
             "terminationMessagePath": "",
             "terminationMessagePolicy": "",
             "tty": false,
-            "volumeDevices": Array [
-              Object {
-                "devicePath": "",
-                "name": "",
-              },
-            ],
-            "volumeMounts": Array [
-              Object {
-                "mountPath": "",
-                "mountPropagation": "",
-                "name": "",
-                "readOnly": false,
-                "subPath": "",
-                "subPathExpr": "",
-              },
-            ],
+            "volumeDevices": Array [],
+            "volumeMounts": Array [],
             "workingDir": "",
           },
         ],
@@ -1124,31 +551,16 @@ Object {
           "runAsGroup": 0,
           "runAsNonRoot": false,
           "runAsUser": 0,
-          "seLinuxOptions": Object {
-            "level": "",
-            "role": "",
-            "type": "",
-            "user": "",
-          },
-          "seccompProfile": Object {
-            "localhostProfile": "",
-            "type": "",
-          },
-          "supplementalGroups": Array [
-            0,
-          ],
+          "seLinuxOptions": undefined,
+          "seccompProfile": undefined,
+          "supplementalGroups": Array [],
           "sysctls": Array [
             Object {
               "name": "",
               "value": "",
             },
           ],
-          "windowsOptions": Object {
-            "gmsaCredentialSpec": "",
-            "gmsaCredentialSpecName": "",
-            "hostProcess": false,
-            "runAsUserName": "",
-          },
+          "windowsOptions": undefined,
         },
         "serviceAccount": "",
         "serviceAccountName": "",
@@ -1167,18 +579,7 @@ Object {
         ],
         "topologySpreadConstraints": Array [
           Object {
-            "labelSelector": Object {
-              "matchExpressions": Array [
-                Object {
-                  "key": "",
-                  "operator": "",
-                  "values": Array [
-                    "",
-                  ],
-                },
-              ],
-              "matchLabels": Object {},
-            },
+            "labelSelector": undefined,
             "maxSkew": 0,
             "topologyKey": "",
             "whenUnsatisfiable": "",
@@ -1206,9 +607,7 @@ Object {
               "shareName": "",
             },
             "cephfs": Object {
-              "monitors": Array [
-                "",
-              ],
+              "monitors": Array [],
               "path": "",
               "readOnly": false,
               "secretFile": "",
@@ -1220,9 +619,7 @@ Object {
             "cinder": Object {
               "fsType": "",
               "readOnly": false,
-              "secretRef": Object {
-                "name": "",
-              },
+              "secretRef": undefined,
               "volumeID": "",
             },
             "configMap": Object {
@@ -1240,9 +637,7 @@ Object {
             "csi": Object {
               "driver": "",
               "fsType": "",
-              "nodePublishSecretRef": Object {
-                "name": "",
-              },
+              "nodePublishSecretRef": undefined,
               "readOnly": false,
               "volumeAttributes": Object {},
             },
@@ -1250,69 +645,22 @@ Object {
               "defaultMode": 0,
               "items": Array [
                 Object {
-                  "fieldRef": Object {
-                    "apiVersion": "",
-                    "fieldPath": "",
-                  },
+                  "fieldRef": undefined,
                   "mode": 0,
                   "path": "",
-                  "resourceFieldRef": Object {
-                    "containerName": "",
-                    "divisor": "",
-                    "resource": "",
-                  },
+                  "resourceFieldRef": undefined,
                 },
               ],
             },
             "emptyDir": Object {
               "medium": "",
-              "sizeLimit": "",
+              "sizeLimit": undefined,
             },
             "ephemeral": Object {
               "volumeClaimTemplate": Object {
-                "metadata": Object {
-                  "annotations": Object {},
-                  "clusterName": "",
-                  "creationTimestamp": "",
-                  "deletionGracePeriodSeconds": 0,
-                  "deletionTimestamp": "",
-                  "finalizers": Array [
-                    "",
-                  ],
-                  "generateName": "",
-                  "generation": 0,
-                  "labels": Object {},
-                  "managedFields": Array [
-                    Object {
-                      "apiVersion": "",
-                      "fieldsType": "",
-                      "fieldsV1": Object {},
-                      "manager": "",
-                      "operation": "",
-                      "subresource": "",
-                      "time": "",
-                    },
-                  ],
-                  "name": "",
-                  "namespace": "",
-                  "ownerReferences": Array [
-                    Object {
-                      "apiVersion": "",
-                      "blockOwnerDeletion": false,
-                      "controller": false,
-                      "kind": "",
-                      "name": "",
-                      "uid": "",
-                    },
-                  ],
-                  "resourceVersion": "",
-                  "selfLink": "",
-                  "uid": "",
-                },
+                "metadata": undefined,
                 "spec": Object {
-                  "accessModes": Array [
-                    "",
-                  ],
+                  "accessModes": Array [],
                   "dataSource": Object {
                     "apiGroup": "",
                     "kind": "",
@@ -1323,22 +671,8 @@ Object {
                     "kind": "",
                     "name": "",
                   },
-                  "resources": Object {
-                    "limits": Object {},
-                    "requests": Object {},
-                  },
-                  "selector": Object {
-                    "matchExpressions": Array [
-                      Object {
-                        "key": "",
-                        "operator": "",
-                        "values": Array [
-                          "",
-                        ],
-                      },
-                    ],
-                    "matchLabels": Object {},
-                  },
+                  "resources": undefined,
+                  "selector": undefined,
                   "storageClassName": "",
                   "volumeMode": "",
                   "volumeName": "",
@@ -1349,21 +683,15 @@ Object {
               "fsType": "",
               "lun": 0,
               "readOnly": false,
-              "targetWWNs": Array [
-                "",
-              ],
-              "wwids": Array [
-                "",
-              ],
+              "targetWWNs": Array [],
+              "wwids": Array [],
             },
             "flexVolume": Object {
               "driver": "",
               "fsType": "",
               "options": Object {},
               "readOnly": false,
-              "secretRef": Object {
-                "name": "",
-              },
+              "secretRef": undefined,
             },
             "flocker": Object {
               "datasetName": "",
@@ -1397,13 +725,9 @@ Object {
               "iqn": "",
               "iscsiInterface": "",
               "lun": 0,
-              "portals": Array [
-                "",
-              ],
+              "portals": Array [],
               "readOnly": false,
-              "secretRef": Object {
-                "name": "",
-              },
+              "secretRef": undefined,
               "targetPortal": "",
             },
             "name": "",
@@ -1443,28 +767,15 @@ Object {
                   "downwardAPI": Object {
                     "items": Array [
                       Object {
-                        "fieldRef": Object {
-                          "apiVersion": "",
-                          "fieldPath": "",
-                        },
+                        "fieldRef": undefined,
                         "mode": 0,
                         "path": "",
-                        "resourceFieldRef": Object {
-                          "containerName": "",
-                          "divisor": "",
-                          "resource": "",
-                        },
+                        "resourceFieldRef": undefined,
                       },
                     ],
                   },
                   "secret": Object {
-                    "items": Array [
-                      Object {
-                        "key": "",
-                        "mode": 0,
-                        "path": "",
-                      },
-                    ],
+                    "items": Array [],
                     "name": "",
                     "optional": false,
                   },
@@ -1488,14 +799,10 @@ Object {
               "fsType": "",
               "image": "",
               "keyring": "",
-              "monitors": Array [
-                "",
-              ],
+              "monitors": Array [],
               "pool": "",
               "readOnly": false,
-              "secretRef": Object {
-                "name": "",
-              },
+              "secretRef": undefined,
               "user": "",
             },
             "scaleIO": Object {
@@ -1503,9 +810,7 @@ Object {
               "gateway": "",
               "protectionDomain": "",
               "readOnly": false,
-              "secretRef": Object {
-                "name": "",
-              },
+              "secretRef": undefined,
               "sslEnabled": false,
               "storageMode": "",
               "storagePool": "",
@@ -1514,22 +819,14 @@ Object {
             },
             "secret": Object {
               "defaultMode": 0,
-              "items": Array [
-                Object {
-                  "key": "",
-                  "mode": 0,
-                  "path": "",
-                },
-              ],
+              "items": Array [],
               "optional": false,
               "secretName": "",
             },
             "storageos": Object {
               "fsType": "",
               "readOnly": false,
-              "secretRef": Object {
-                "name": "",
-              },
+              "secretRef": undefined,
               "volumeName": "",
               "volumeNamespace": "",
             },
@@ -1549,8 +846,8 @@ Object {
     "collisionCount": 0,
     "conditions": Array [
       Object {
-        "lastTransitionTime": "",
-        "lastUpdateTime": "",
+        "lastTransitionTime": undefined,
+        "lastUpdateTime": undefined,
         "message": "",
         "reason": "",
         "status": "",

@@ -1,10 +1,10 @@
 import * as path from "path";
 import * as Module from "../index";
 
-const basePath = __dirname;
+const basePath = path.join(__dirname, "./sample-code/");
 
-describe("JSON Schema", () => {
-  test("types.ts", () => {
+describe("Popular JSON Schema Test", () => {
+  test("Load files directly", () => {
     const schema = Module.generateJsonSchema({
       files: [path.join(basePath, "./types.ts")],
       typeName: {
@@ -19,7 +19,7 @@ describe("JSON Schema", () => {
     expect(schema).toMatchSnapshot();
   });
 
-  test("sample.ts", () => {
+  test("Reading files indirectly", () => {
     const schema = Module.generateJsonSchema({
       files: [path.join(basePath, "./sample.ts")],
       typeName: {
