@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popular JSON Schema Test Load files directly 1`] = `
+Object {
+  "jsonSchema": Object {
+    "$ref": "#/definitions/Directory",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": Object {
+      "Child": Object {
+        "anyOf": Array [
+          Object {
+            "$ref": "#/definitions/File",
+          },
+          Object {
+            "$ref": "#/definitions/Directory",
+          },
+        ],
+      },
+      "Directory": Object {
+        "additionalProperties": false,
+        "properties": Object {
+          "children": Object {
+            "items": Object {
+              "$ref": "#/definitions/Child",
+            },
+            "type": "array",
+          },
+        },
+        "required": Array [
+          "children",
+        ],
+        "type": "object",
+      },
+      "File": Object {
+        "additionalProperties": false,
+        "properties": Object {
+          "name": Object {
+            "type": "string",
+          },
+        },
+        "required": Array [
+          "name",
+        ],
+        "type": "object",
+      },
+    },
+  },
+}
+`;

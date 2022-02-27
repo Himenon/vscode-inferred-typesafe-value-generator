@@ -10,6 +10,8 @@ export interface ConvertedObject {
 
 export class Walker {
   private readonly schema: Types.Schema;
+  private visitedRefList: string[] = [];
+
   constructor(schema: Types.Schema) {
     this.schema = JSON.parse(JSON.stringify(schema));
   }
@@ -72,6 +74,12 @@ export class Walker {
   private reference = (schema: Types.Reference): any => {
     const decodeRef = decodeURIComponent(schema.$ref);
     const ref = decodeRef.replace(/\./g, "\\.").replace(/^#\//, "").replace(/\//g, ".");
+    if (this.visitedRefList.filter((visitedRef) => visitedRef === ref).length > 1) {
+      return this.undefinedValue();
+    } else {
+      // add 2 times
+      this.visitedRefList.push(ref);
+    }
     const refSchema = DotProp.get(this.schema, ref) as any;
     return this._convert(refSchema);
   };
@@ -82,7 +90,8 @@ export class Walker {
       return [];
     }
     if (!Array.isArray(items)) {
-      return [this._convert(items)];
+      const value = this._convert(items);
+      return value ? [value] : [];
     }
     return items.map((item) => {
       if (typeof item === "boolean") {

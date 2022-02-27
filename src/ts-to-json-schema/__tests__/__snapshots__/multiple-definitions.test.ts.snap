@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Multi Type Test Load files directly 1`] = `
+Object {
+  "errorMessage": "Type \\"Config\\" has multiple definitions.",
+  "jsonSchema": undefined,
+}
+`;
