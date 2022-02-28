@@ -1,5 +1,5 @@
 import * as ts from "typescript";
-import * as tsj from "ts-json-schema-generator";
+import * as tsj from "./SchemaGenerator";
 import * as path from "path";
 import * as glob from "glob";
 import { DateParser } from "./NodeParser/DateParser";

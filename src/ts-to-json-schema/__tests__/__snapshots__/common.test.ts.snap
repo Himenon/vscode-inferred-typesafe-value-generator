@@ -13,7 +13,16 @@ Object {
             "type": "string",
           },
           "service_a": Object {
-            "$ref": "#/definitions/ServiceA",
+            "additionalProperties": false,
+            "properties": Object {
+              "url": Object {
+                "type": "string",
+              },
+            },
+            "required": Array [
+              "url",
+            ],
+            "type": "object",
           },
           "service_b": Object {
             "additionalProperties": false,
@@ -25,11 +34,16 @@ Object {
                 "type": "number",
               },
               "url": Object {
-                "enum": Array [
-                  "https://dev.example.com",
-                  "https://prod.example.com/b",
+                "anyOf": Array [
+                  Object {
+                    "const": "https://dev.example.com",
+                    "type": "string",
+                  },
+                  Object {
+                    "const": "https://prod.example.com/b",
+                    "type": "string",
+                  },
                 ],
-                "type": "string",
               },
             },
             "required": Array [
@@ -45,18 +59,6 @@ Object {
         ],
         "type": "object",
       },
-      "ServiceA": Object {
-        "additionalProperties": false,
-        "properties": Object {
-          "url": Object {
-            "type": "string",
-          },
-        },
-        "required": Array [
-          "url",
-        ],
-        "type": "object",
-      },
     },
   },
 }
@@ -64,7 +66,64 @@ Object {
 
 exports[`Popular JSON Schema Test Reading files indirectly 1`] = `
 Object {
-  "errorMessage": "Type \\"ServerSideConfig\\" has multiple definitions.",
-  "jsonSchema": undefined,
+  "jsonSchema": Object {
+    "$ref": "#/definitions/ServerSideConfig",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": Object {
+      "ServerSideConfig": Object {
+        "additionalProperties": false,
+        "properties": Object {
+          "name": Object {
+            "type": "string",
+          },
+          "service_a": Object {
+            "additionalProperties": false,
+            "properties": Object {
+              "url": Object {
+                "type": "string",
+              },
+            },
+            "required": Array [
+              "url",
+            ],
+            "type": "object",
+          },
+          "service_b": Object {
+            "additionalProperties": false,
+            "properties": Object {
+              "apiToken": Object {
+                "type": "string",
+              },
+              "timeout": Object {
+                "type": "number",
+              },
+              "url": Object {
+                "anyOf": Array [
+                  Object {
+                    "const": "https://dev.example.com",
+                    "type": "string",
+                  },
+                  Object {
+                    "const": "https://prod.example.com/b",
+                    "type": "string",
+                  },
+                ],
+              },
+            },
+            "required": Array [
+              "url",
+              "timeout",
+            ],
+            "type": "object",
+          },
+        },
+        "required": Array [
+          "name",
+          "service_b",
+        ],
+        "type": "object",
+      },
+    },
+  },
 }
 `;

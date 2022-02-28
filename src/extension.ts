@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import * as App from "./app";
 
-export function activate(context: vscode.ExtensionContext) {
+export const activate = (context: vscode.ExtensionContext) => {
   let disposable = vscode.commands.registerCommand("extension.infer.typesafe.value.generate", () => {
     const editor = vscode.window.activeTextEditor;
     if (!editor) {
@@ -37,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
   });
 
   context.subscriptions.push(disposable);
-}
+};
 
 // this method is called when your extension is deactivated
 export function deactivate() {}

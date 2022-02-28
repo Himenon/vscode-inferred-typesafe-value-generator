@@ -3,14 +3,14 @@ import * as Module from "../index";
 
 const basePath = path.join(__dirname, "./sample-code");
 
-describe("Multi Type Test", () => {
+describe("Function Type Test", () => {
   test("Not thorw Error", () => {
     expect(() => {
       Module.generateJsonSchema({
-        files: [path.join(basePath, "./sample.ts")],
+        files: [path.join(basePath, "./function-types.ts")],
         typeName: {
           isUnknown: false,
-          firstTypeName: "SameTypeConfig",
+          firstTypeName: "Config",
           isArray: false,
           intersectinoTypeNames: [],
           isIntersectionType: false,
@@ -20,7 +20,7 @@ describe("Multi Type Test", () => {
     }).not.toThrow();
   });
 
-  test("Schema Snapshot", () => {
+  test.skip("Schema Snapshot", () => {
     const schema = Module.generateJsonSchema({
       files: [path.join(basePath, "./sample.ts")],
       typeName: {
