@@ -1,8 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Multi Type Test Load files directly 1`] = `
+exports[`Multi Type Test Schema Snapshot 1`] = `
 Object {
-  "errorMessage": "Type \\"Config\\" has multiple definitions.",
-  "jsonSchema": undefined,
+  "jsonSchema": Object {
+    "$ref": "#/definitions/SameTypeConfig",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": Object {
+      "SameTypeConfig": Object {
+        "additionalProperties": false,
+        "properties": Object {
+          "service1": Object {
+            "additionalProperties": false,
+            "properties": Object {
+              "service": Object {
+                "additionalProperties": false,
+                "properties": Object {
+                  "description": Object {
+                    "type": "string",
+                  },
+                  "name": Object {
+                    "type": "string",
+                  },
+                },
+                "required": Array [
+                  "name",
+                  "description",
+                ],
+                "type": "object",
+              },
+            },
+            "required": Array [
+              "service",
+            ],
+            "type": "object",
+          },
+          "service2": Object {
+            "additionalProperties": false,
+            "properties": Object {
+              "service": Object {
+                "additionalProperties": false,
+                "properties": Object {
+                  "id": Object {
+                    "type": "string",
+                  },
+                  "tags": Object {
+                    "items": Array [
+                      Object {
+                        "additionalProperties": false,
+                        "properties": Object {
+                          "name": Object {
+                            "type": "string",
+                          },
+                        },
+                        "required": Array [
+                          "name",
+                        ],
+                        "type": "object",
+                      },
+                    ],
+                    "type": "array",
+                  },
+                  "version": Object {
+                    "type": "string",
+                  },
+                },
+                "required": Array [
+                  "id",
+                  "tags",
+                ],
+                "type": "object",
+              },
+            },
+            "required": Array [
+              "service",
+            ],
+            "type": "object",
+          },
+        },
+        "required": Array [
+          "service1",
+          "service2",
+        ],
+        "type": "object",
+      },
+    },
+  },
 }
 `;

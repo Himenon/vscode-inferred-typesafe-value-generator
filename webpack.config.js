@@ -5,16 +5,20 @@
 const path = require("path");
 const webpack = require("webpack");
 
+const outputDir = path.resolve(__dirname, "dist");
+
 /**@type {import('webpack').Configuration}*/
 const config = {
   target: "node",
   mode: "none",
 
-  entry: "./src/extension.ts",
+  entry: {
+    extension: "./src/extension.ts",
+  },
   output: {
     clean: true,
-    path: path.resolve(__dirname, "dist"),
-    filename: "extension.js",
+    path: outputDir,
+    // filename: "extension.js",
     libraryTarget: "commonjs2",
     devtoolModuleFilenameTemplate: "../[resource-path]",
   },
@@ -23,8 +27,12 @@ const config = {
   },
   devtool: "nosources-source-map",
   externals: {
-    // typescript: "typescript",
-    // prettier: "prettier",
+    /**
+     * @see https://code.visualstudio.com/api/working-with-extensions/bundling-extension#webpack-critical-dependencies
+     * .vscodeignore煮含めることで回避できる
+     */
+    prettier: "prettier", // !node_modules/prettier
+    typescript: "typescript", // !node_modules/typescript
     vscode: "commonjs vscode",
   },
   plugins: [
@@ -33,7 +41,7 @@ const config = {
     }),
   ],
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: [".ts", ".js", ".json"],
   },
   module: {
     rules: [
