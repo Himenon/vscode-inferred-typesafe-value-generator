@@ -32,13 +32,5 @@ export class SchemaGenerator extends tsj.SchemaGenerator {
     const converter = new TsjTypeToOneJsonShema();
     const type = findRootDefinitionType.getType();
     childDefinitions[rootTypeName] = converter.getSchema(type);
-    // children.reduce((definitions, child) => {
-    //   const name = child.getName();
-    //   console.log({ name, type: JSON.stringify(child.getType()) });
-    //   if (!(name in definitions)) {
-    //     definitions[name] = this.typeFormatter.getDefinition(child.getType());
-    //   }
-    //   return definitions;
-    // }, childDefinitions);
   }
 }

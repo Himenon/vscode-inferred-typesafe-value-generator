@@ -40,6 +40,10 @@ export interface FunctionSchema extends Omit<ObjectSchema, "format"> {
   format: "function";
 }
 
+export interface SymbolSchema extends Omit<ObjectSchema, "format"> {
+  format: "symbol";
+}
+
 export interface ObjectSchemaWithAdditionalProperties extends ObjectSchema {
   additionalProperties: JSONSchemaDefinition;
 }

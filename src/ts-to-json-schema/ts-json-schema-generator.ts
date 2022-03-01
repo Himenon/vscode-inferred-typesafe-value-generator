@@ -4,7 +4,8 @@ import * as path from "path";
 import * as glob from "glob";
 import { DateParser } from "./NodeParser/DateParser";
 import { FunctionNodeParser } from "./NodeParser/FunctionNodeParser";
-import { FunctionTypeFormatter } from "./TypeFormatter";
+import { TemplateLiteralTypeParser } from "./NodeParser/TemplateLiteralTypeParser";
+import { FunctionTypeFormatter, TemplateLiteralTypeFormatter } from "./TypeFormatter";
 import type { GetTypeName } from "../ts-ast-utils/get-type-name";
 import type { JSONSchema7 as Schema, JSONSchema7TypeName as JSONSchemaTypeName } from "json-schema";
 
@@ -40,9 +41,11 @@ export const generate = (args: GenerateJsonSchemaArgs): Schema => {
   };
   const formatter = tsj.createFormatter(config, (fmt, circularReferenceTypeFormatter) => {
     fmt.addTypeFormatter(new FunctionTypeFormatter(circularReferenceTypeFormatter));
+    fmt.addTypeFormatter(new TemplateLiteralTypeFormatter(circularReferenceTypeFormatter));
   });
   const program = createProgram(config);
   const parser = tsj.createParser(program, config, (prs) => {
+    prs.addNodeParser(new TemplateLiteralTypeParser());
     prs.addNodeParser(new FunctionNodeParser());
     prs.addNodeParser(new DateParser());
   });
