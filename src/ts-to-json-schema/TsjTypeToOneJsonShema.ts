@@ -1,4 +1,6 @@
 import * as tsj from "ts-json-schema-generator";
+import { TemplateLiteralType } from "./Type/TemplateLiteralType";
+import { FunctionType } from "./Type/FunctionType";
 import type { JSONSchema7Type, JSONSchema7TypeName } from "json-schema";
 
 export class TsjTypeToOneJsonShema {
@@ -65,7 +67,36 @@ export class TsjTypeToOneJsonShema {
     if (type instanceof tsj.AnyType) {
       return this.convertAnyType(type);
     }
+    if (type instanceof TemplateLiteralType) {
+      return this.convertTemplateLiteralType(type);
+    }
+    if (type instanceof FunctionType) {
+      return this.convertFunctionType(type);
+    }
+    if (type.getName() === "symbol") {
+      return this.convertsymbolType();
+    }
     throw new Error(`Unsupport type ${type.getName()}. If you want a fix, please submit a pull request for the code to be reproduced.`);
+  }
+
+  private convertFunctionType(type: FunctionType): tsj.Schema {
+    return {
+      type: "object",
+      properties: {},
+    };
+  }
+
+  private convertTemplateLiteralType(type: TemplateLiteralType): tsj.Schema {
+    return {
+      type: "string",
+    };
+  }
+
+  private convertsymbolType(): tsj.Schema {
+    return {
+      type: "object",
+      format: "symbol",
+    };
   }
 
   private convertAnyType(type: tsj.AnyType): tsj.Schema {

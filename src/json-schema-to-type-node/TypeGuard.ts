@@ -22,6 +22,13 @@ export const isFunctionSchema = (schema: SchemaType.Schema): schema is SchemaTyp
   return isObjectSchema(schema) && schema.format === "function";
 };
 
+/**
+ * 独自定義
+ */
+export const isSymbolSchema = (schema: SchemaType.Schema): schema is SchemaType.SymbolSchema => {
+  return isObjectSchema(schema) && schema.format === "js-symbol";
+};
+
 export const isHasNoMembersObject = (schema: SchemaType.Schema): boolean => {
   return Object.keys(schema).length === 0;
 };

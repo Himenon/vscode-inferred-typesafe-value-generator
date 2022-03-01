@@ -9,6 +9,7 @@ export type AsyncFunc = (args: CallbackArgs) => Promise<number>;
 export interface MyObject {
   syncFunc: SyncFunc;
   asyncFunc: AsyncFunc;
+  sample: () => void;
 }
 
 export interface RootObject {
@@ -16,5 +17,9 @@ export interface RootObject {
 }
 
 export const value: RootObject = {
-  myObject: {},
+  myObject: {
+    syncFunc: {},
+    asyncFunc: {},
+    sample: {},
+  },
 };

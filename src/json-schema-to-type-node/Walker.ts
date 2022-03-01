@@ -27,6 +27,9 @@ export class Walker {
       if (TypeGuard.isFunctionSchema(schema)) {
         return this.functionTypeValue(schema);
       }
+      if (TypeGuard.isSymbolSchema(schema)) {
+        return this.symbolTypeValue(schema);
+      }
       return this.convertObject(schema);
     }
     if (TypeGuard.isPrimitiveSchema(schema)) {
@@ -216,5 +219,9 @@ export class Walker {
    */
   private functionTypeValue = (_schema: Types.FunctionSchema) => {
     return undefined;
+  };
+
+  private symbolTypeValue = (_schema: Types.SymbolSchema) => {
+    return Symbol();
   };
 }

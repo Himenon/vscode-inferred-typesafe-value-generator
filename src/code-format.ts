@@ -1,8 +1,7 @@
+import { format } from "prettier";
 export const codeFormat = (source: string): string => {
   try {
-    require.resolve("prettier");
-    const prettier = require("prettier");
-    return prettier.format(source, { parser: "babel" });
+    return format(source, { parser: "babel-ts", printWidth: 54 });
   } catch (e) {
     return source;
   }

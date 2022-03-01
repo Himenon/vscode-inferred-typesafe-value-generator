@@ -1,6 +1,11 @@
 import * as ts from "typescript";
 
-export const SyntaxKinds = [ts.SyntaxKind.TrueKeyword, ts.SyntaxKind.FalseKeyword];
+export const PrimtiiveSyntaxKinds = [
+  ts.SyntaxKind.QuestionDotToken,
+  ts.SyntaxKind.SymbolKeyword,
+  ts.SyntaxKind.TrueKeyword,
+  ts.SyntaxKind.FalseKeyword,
+];
 
 /**
  * nodeが変数
@@ -27,7 +32,7 @@ export const isFunctionExpression = (node: ts.Node): boolean => {
  * @returns
  */
 export const isSyntaxKindExpression = (node: ts.Node): boolean => {
-  return SyntaxKinds.some((kind) => node.kind === kind);
+  return PrimtiiveSyntaxKinds.some((kind) => node.kind === kind);
 };
 
 /**
@@ -56,6 +61,10 @@ export const isPrimitiveExpression = (node: ts.Node): boolean => {
  */
 export const isNewExpression = (node: ts.Node): boolean => {
   return ts.isNewExpression(node);
+};
+
+export const isTemplateLiteralExpression = (node: ts.Node): node is ts.TemplateExpression => {
+  return ts.isTemplateExpression(node);
 };
 
 /**

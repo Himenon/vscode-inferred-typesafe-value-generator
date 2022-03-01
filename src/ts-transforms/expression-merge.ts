@@ -21,6 +21,9 @@ const firstFallbackTypeNode = (originalValueTypeNode: ts.Node, correctTypeNode: 
   if (ts.isPropertyAccessExpression(originalValueTypeNode)) {
     return cloneNode(originalValueTypeNode);
   }
+  if (ts.isElementAccessExpression(originalValueTypeNode)) {
+    return cloneNode(originalValueTypeNode);
+  }
   if (ts.isNonNullExpression(originalValueTypeNode)) {
     return cloneNode(originalValueTypeNode);
   }
@@ -31,6 +34,9 @@ const firstFallbackTypeNode = (originalValueTypeNode: ts.Node, correctTypeNode: 
     return cloneNode(originalValueTypeNode);
   }
   if (TypeCheck.isNewExpression(originalValueTypeNode)) {
+    return cloneNode(originalValueTypeNode);
+  }
+  if (TypeCheck.isTemplateLiteralExpression(originalValueTypeNode)) {
     return cloneNode(originalValueTypeNode);
   }
   return cloneNode(correctTypeNode);

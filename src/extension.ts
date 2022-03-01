@@ -1,12 +1,18 @@
 import * as vscode from "vscode";
 import * as App from "./app";
 
+const OUTPUT_CHANNEL_NAME = "Inferred Value Generator";
+const COMMAND_NAME = "extension.infer.typesafe.value.generate";
+
 export const activate = (context: vscode.ExtensionContext) => {
-  let disposable = vscode.commands.registerCommand("extension.infer.typesafe.value.generate", () => {
+  const channel = vscode.window.createOutputChannel(OUTPUT_CHANNEL_NAME);
+
+  let disposable = vscode.commands.registerCommand(COMMAND_NAME, () => {
     const editor = vscode.window.activeTextEditor;
     if (!editor) {
       return;
     }
+
     const fullText = editor.document.getText();
     const filepath = editor.document.fileName;
     const lineNumber = editor.selection.active.line;
@@ -20,8 +26,10 @@ export const activate = (context: vscode.ExtensionContext) => {
       lineNumber: lineNumber + OFFSET,
     });
     if (errorMessages.length || !update) {
-      const message = errorMessages.join("\n");
-      vscode.window.setStatusBarMessage(`Infer: ${message}`);
+      errorMessages.forEach((errorMessage) => {
+        channel.appendLine(`Infer: ${errorMessage}`);
+      });
+      channel.show();
       return;
     }
     const area = update.position;
@@ -33,7 +41,7 @@ export const activate = (context: vscode.ExtensionContext) => {
     editor.edit((editBuilder) => {
       editBuilder.replace(newSelection, update.value.trim());
     });
-    vscode.window.setStatusBarMessage(`Infer: Updated "${update.variableName}" variable.`);
+    channel.appendLine(`Infer: Updated "${update.variableName}" variable.`);
   });
 
   context.subscriptions.push(disposable);
