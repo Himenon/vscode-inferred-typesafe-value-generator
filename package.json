@@ -1,7 +1,7 @@
 {
 	"name": "typescript-inferred-typesafe-value-generator",
 	"displayName": "TypeScript Inferred TypeSafe Value Generator",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"private": true,
 	"description": "Automatically generates values inferred from type definitions.",
 	"categories": [
@@ -88,6 +88,7 @@
 	"dependencies": {
 		"dot-prop": "6.0.1",
 		"json-schema": "^0.4.0",
+		"prettier": "^2.5.1",
 		"ts-clone-node": "^0.3.30",
 		"ts-json-schema-generator": "^0.98.0",
 		"typescript": "~4.5.5",
@@ -106,7 +107,6 @@
 		"glob": "^7.2.0",
 		"jest": "^27.5.1",
 		"lint-staged": "^12.3.4",
-		"prettier": "^2.5.1",
 		"simple-git-hooks": "^2.7.0",
 		"sort-package-json": "^1.54.0",
 		"source-map-support": "^0.5.21",
